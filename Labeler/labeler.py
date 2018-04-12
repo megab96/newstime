@@ -4,7 +4,7 @@ textrazor.api_key = "5634740d9e8d89a14374edaa305c207bd6eda5918bbe233634beb092"
 
 i = 0
 
-client = textrazor.TextRazor(extractors=["topics"])  #instance of TextRazor class
+client = textrazor.TextRazor(extractors=["topics", "entities"])  #instance of TextRazor class
 
 response1 = client.analyze_url("https://www.nbcnews.com/news/world/catalan-independence-referendum-what-s-behind-divisive-spanish-vote-n805421")
 response2 = client.analyze_url("https://www.nytimes.com/2015/09/22/opinion/why-a-brexit-looms-large.html?rref=collection%2Ftimestopic%2FEuropean%20Union&action=click&contentCollection=timestopics&region=stream&module=stream_unit&version=search&contentPlacement=53&pgtype=collection")
@@ -13,20 +13,26 @@ similarCount = 0
 i = 0
 for topic1 in response1.topics():
 	for topic2 in response2.topics():
-		if (topic1.label == topic2.label and topic1.score > 0.8 and topic2.score > 0.8 ):
+		if (topic1.label == topic2.label and topic1.score > 0.8 and topic2.score > 0.8):
 			similarCount = similarCount + 1
-			print(topic1.label)
+			# print(topic1.label)
 
-	if(similarCount > 3):
-		sameStory = True
-		print("same story")
+	# if(similarCount > 3):
+	# 	sameStory = True
+	#     print("same story")
 	i = i+1
 
 	if(i<=20):
 		print(topic1.label)
 	else:
 		break
-
+i = 0
+for entity1 in response1.entities():
+	i = i+1
+	if(i<=20):
+		print(id)
+	else:
+		break
 
 # facebook cambridge analytica scandal:
 
