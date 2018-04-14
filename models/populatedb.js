@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+// DB Config
+const db = require('../config/database');
+
 require('./Timeline');
 const Timeline = mongoose.model('timelines')
 require('./Article');
@@ -9,7 +12,7 @@ const Article = mongoose.model('articles')
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/newstime-dev')
+mongoose.connect(db.mongoURI)
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 

@@ -4,10 +4,13 @@ const mongoose = require('mongoose')
 
 const app = express();  // init application
 
+// DB Config
+const db = require('./config/database');
+
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/newstime-dev')
+mongoose.connect(db.mongoURI)
     .then(() => console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
 
@@ -57,7 +60,7 @@ app.get('/timelines/show/:id', (req, res) => {
         })
 })
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log('Server started on port ' + port);
