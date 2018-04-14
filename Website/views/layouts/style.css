@@ -4,4 +4,6 @@
     height: 100%; width: 100%;
 }
 
-.timeline-card:hover { color:blue; }
+.timeline-card:hover { 
+    background: rgba(22, 63, 245, 0.089);
+}
