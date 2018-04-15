@@ -1,12 +1,14 @@
 # NewsTime
 
-A website that displays the news in timelines where events are sorted chronologically in timelines that correspond to their topic. Live deployment of the website: https://newstime437.herokuapp.com
+EECE437 Team Project
+Tarek Tohme, Alexandre Megarbane, Elie Tamer, Karl Hayek
 
-The website made using NodeJS and ExpressJS, and using MongoDB for the database.
+A website that displays the news in timelines where events are sorted chronologically in timelines that correspond to their topic.
 
-To run the web app execute the commands `node install` and `node app.js`
-Note: For now the database is local
+**Deployed app**: https://newstime437.herokuapp.com
 
-Dependencies: NodeJS, MongoDB
+**Dependencies**: NodeJS, MongoDB.
+
+To launch the web app locally execute the command `npm install && npm start`.
 
 And that's the wayy the news goes.
