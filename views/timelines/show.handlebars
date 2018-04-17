@@ -1,0 +1,14 @@
+<h2>{{timeline.title}}</h2>
+<strong>{{timeline.details}}</strong>
+<br><br>
+{{#each timeline.articles}}
+<div class="card card-body mt-2 timeline-card">
+    <h5>{{title}}</h5>
+    <small><a href="{{link}}">{{link}}</a></small>
+    <small>Added on {{date_added}}</small>
+</div>
+
+
+{{else}}
+<p>No articles for this timeline</p>
+{{/each}}

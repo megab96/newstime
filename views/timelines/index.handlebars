@@ -1,0 +1,13 @@
+<p>Click on a timeline to view its events</p>
+
+{{#each timelines}}
+<div class="card card-body mb-3 timeline-card">
+    <a href="/timelines/show/{{id}}"></a>
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+</div>
+ 
+
+{{else}}
+<p>No timelines listed</p>
+{{/each}}
