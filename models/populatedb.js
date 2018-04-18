@@ -11,6 +11,14 @@
 //Good points:
 //- nice idea to use mongoose, it's very flexible and it's fit for our application
 
+//A.M. code review comments:
+
+//I agree with the above + can add the following:
+//-Refactor the code by using functions rather than aa unique block
+//-Can add comments that explain the procedure and why it was chosen
+//-Rename some variables (indexOf... instead of just index for example)
+
+//-Very good work and results (just need to make the code more structured)
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
